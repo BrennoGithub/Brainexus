@@ -1,0 +1,106 @@
+<div class="cadastro-container">
+
+    <h1>Criar conta</h1>
+
+    <form [formGroup]="cadastro" (ngSubmit)="onSubmit()">
+
+        <!-- Nome -->
+        <div class="campo">
+
+            <label for="nome">Nome</label>
+
+            <input id="nome" type="text" formControlName="nome" placeholder="Digite seu nome">
+
+            @if (cadastro.controls.nome.touched &&
+            cadastro.controls.nome.hasError('required')) {
+
+            <p class="erro">O nome é obrigatório.</p>
+
+            }
+
+            @if (cadastro.controls.nome.touched &&
+            cadastro.controls.nome.hasError('minlength')) {
+
+            <p class="erro">O nome deve ter pelo menos 3 caracteres.</p>
+
+            }
+
+        </div>
+
+
+        <!-- E-mail -->
+        <div class="campo">
+
+            <label for="email">E-mail</label>
+
+            <input id="email" type="email" formControlName="email" placeholder="Digite seu e-mail">
+
+            @if (cadastro.controls.email.touched &&
+            cadastro.controls.email.hasError('required')) {
+
+            <p class="erro">O e-mail é obrigatório.</p>
+
+            }
+
+            @if (cadastro.controls.email.touched &&
+            cadastro.controls.email.hasError('email')) {
+
+            <p class="erro">Digite um e-mail válido.</p>
+
+            }
+
+        </div>
+
+
+        <!-- Senha -->
+        <div class="campo">
+
+            <label for="senha">Senha</label>
+
+            <input id="senha" type="password" formControlName="senha" placeholder="Digite sua senha">
+
+            @if (cadastro.controls.senha.touched &&
+            cadastro.controls.senha.hasError('required')) {
+
+            <p class="erro">A senha é obrigatória.</p>
+
+            }
+
+            @if (cadastro.controls.senha.touched &&
+            cadastro.controls.senha.hasError('minlength')) {
+
+            <p class="erro">A senha deve ter pelo menos 6 caracteres.</p>
+
+            }
+
+        </div>
+
+
+        <!-- Confirmar senha -->
+        <div class="campo">
+
+            <label for="confirmarSenha">Confirmar senha</label>
+
+            <input id="confirmarSenha" type="password" formControlName="confirmarSenha"
+                placeholder="Digite a senha novamente">
+
+            @if (cadastro.controls.confirmarSenha.touched &&
+            cadastro.controls.confirmarSenha.hasError('required')) {
+
+            <p class="erro">Confirme sua senha.</p>
+
+            }
+
+        </div>
+
+
+        <button type="submit">
+            Criar conta
+        </button>
+
+    </form>
+    <p>
+        Já possui uma conta?
+        <a routerLink="/login">Entrar</a>
+    </p>
+</div>

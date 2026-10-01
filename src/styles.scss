@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+
+nav {
+    background-color: rgb(255, 255, 64);
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin-right: 25px;
+}
+

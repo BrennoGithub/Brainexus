@@ -1,0 +1,92 @@
+.cadastro-container {
+  width: 400px;
+  margin: 60px auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.campo input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.campo input:focus {
+  border-color: #555;
+}
+
+.campo input::placeholder {
+  color: #999;
+}
+
+.erro {
+  margin: 0;
+  color: #d32f2f;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #222;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.cadastro-container > p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.cadastro-container > p a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cadastro-container > p a:hover {
+  text-decoration: underline;
+}
